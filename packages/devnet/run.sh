@@ -1,9 +1,11 @@
+#!/bin/sh
 set -e
 
 # Create log directory for Geth
 mkdir -p /var/log
 
 # Start Geth and direct output to stdout
+set -x
 /geth \
     --verbosity 5 \
     --datadir node0/ \
